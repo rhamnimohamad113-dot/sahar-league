@@ -68,6 +68,12 @@ html{background:#14103F}body{font-family:Vazirmatn,Tahoma,'Segoe UI',sans-serif;
 .stc{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:14px}.bars{display:flex;align-items:flex-end;gap:5px;height:110px;direction:ltr}.bc{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}.bc i{display:block;width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,#FFD76A,#7C8BFF)}.bc span{font-size:10px;color:var(--mu);margin-top:3px}.stt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;text-align:center}.stt b{display:block;font-size:16px}.stt b.up{color:#6CF0B0}.stt b.dn{color:#FF93A8}.stt small{font-size:11px;color:var(--mu)}
 .wk{display:grid;gap:8px}.wkc{display:flex;gap:10px;align-items:center;background:linear-gradient(90deg,rgba(255,215,106,.18),rgba(255,255,255,.04));border:1px solid rgba(255,215,106,.35);border-radius:18px;padding:10px 12px;cursor:pointer}.wkc div{flex:1}.wkc span{display:block;font-size:11.5px;color:var(--mu)}.wkc b{font-size:15px}.wkc em{display:block;font-style:normal;font-size:12px;color:var(--gold)}.wkc img{width:34px;height:34px}
 .acn{font-size:11.5px;color:#FFD76A;font-weight:700}
+.an{margin-top:16px}.an h3{margin:0 0 10px;font-size:16px;color:var(--gold)}.cmps{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}.cmp{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px;text-align:center}.cmp b{display:block;font-size:22px}.cmp small{display:block;font-size:11px;color:var(--mu)}.cmp i{display:block;font-style:normal;font-size:11.5px;margin:4px 0;font-weight:700}.cmp i.g{color:#6CF0B0}.cmp i.b{color:#FF93A8}
+.trd{margin:10px 0;padding:9px 12px;border-radius:14px;font-size:13px}.trd.g{background:rgba(31,191,117,.15);color:#9BF5C9}.trd.b{background:rgba(240,80,110,.15);color:#FFB3C2}
+.chc{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:10px 12px;margin-top:10px}.chc>b{font-size:13.5px}.chc .lg{float:left;font-size:11px;color:var(--mu)}.chc .lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 4px -1px 2px}.chc .lg i.a{background:#7C8BFF}.chc .lg i.b{background:#FF8FB8}.chs{width:100%;height:auto;display:block;margin-top:6px;direction:ltr}.nd{display:block;font-size:12px;color:var(--mu);padding:12px 0;font-style:normal}
+.cal{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;direction:ltr}.cl{display:inline-block;width:18px;height:18px;border-radius:5px}.cl.p{background:linear-gradient(135deg,#FFD76A,#F2A516)}.cl.o{background:#7C8BFF}.cl.x{background:rgba(255,255,255,.12)}.chc .lg .cl{width:10px;height:10px}
+.shr{margin-top:14px;width:100%;font:inherit;font-weight:700;color:#2A2370;background:linear-gradient(90deg,#FFE38A,#FFB86B);border:0;border-radius:14px;padding:11px;cursor:pointer}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#fff;color:#2A2370;border-radius:14px;padding:10px 16px;font-size:13px;z-index:99;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 @media(max-width:520px){.hero h1{font-size:25px}.hero .sc svg{width:130px;height:auto}}
 </style></head>
 <body><div id="stars"></div><div class="wrap"><div class="brand"><b>🌅 لیگ سحرخیزها</b><span>آزمونک‌های صبحگاهی</span></div><div id="app"></div></div>
@@ -130,7 +136,7 @@ function lgAstro(o){ o = o || {}; const P = {trophy: 'trophy', thumb: 'cheer', f
 function lgAvatar(key, size){ return lgCartoonHead(key, size); }
 function lgScene(kind, pose, size){ return lgCartoon({pose: pose === 'sit' ? 'wave' : (pose || 'wave'), planet: kind === 'moon' ? 'moon' : 'earth', size: size || 220}).replace('class="lg-cart"', 'class="lg-scene"'); }
 function lgBadge(kind, size, txt){ const n = LG_BADGE[kind] || 'glow'; return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="${size || 40}" height="${size || 40}" class="lg-bdg">${lgImg(n, 0, 0, 100)}</svg>`; }</script>
-<script>window.__LEAGUE__={"v":1,"preview":true,"updated":1795012901912,"updatedFa":"1405/08/27","quiz":{},"n":0,"dayList":[],"students":[],"awards":[],"pts":{"part":10,"perCorrect":2,"perfect":10,"streakPer":2,"streakCap":10,"early":[[390,8],[420,5],[480,3],[540,1]],"miles":[[7,20],[14,40],[30,100]],"dayRank":[10,6,3]},"rules":["شرکت در هر آزمونک: ۱۰ امتیاز","هر پاسخ درست: ۲ امتیاز — همه‌ی سؤال‌ها درست: ۱۰ امتیاز پاداش","پیوستگی: هر روز پشت‌سرهم، امتیاز بیشتر (روز دوم به بعد ۲ × تعداد روزهای پیوسته، حداکثر ۱۰ روز)","سحرخیزی: تا ساعت ۰۶:۳۰ → ۸ امتیاز، تا ساعت ۰۷:۰۰ → ۵ امتیاز، تا ساعت ۰۸:۰۰ → ۳ امتیاز، تا ساعت ۰۹:۰۰ → ۱ امتیاز","نشان پیوستگی: ۷ روز → ۲۰ امتیاز، ۱۴ روز → ۴۰ امتیاز، ۳۰ روز → ۱۰۰ امتیاز","رتبه‌های اول هر روز (بیشترین درست): ۱۰، ۶، ۳ امتیاز","اگر تقلبی دیده شود، امتیاز همان روز کم می‌شود."],"tiers":[[0,"کادت سحرخیز"],[40,"خلبان آزمایشی"],[90,"فضانورد"],[160,"کاوشگر ماه"],[250,"فرمانده‌ی مدار"],[360,"کاپیتان کهکشان"],[500,"شکارچی ستاره‌ها"],[680,"نگهبان کهکشان"],[900,"اسطوره‌ی فضا"],[1200,"افسانه‌ی سحرخیزی"]],"start":"2026-11-21T06:00:00","startFa":"شنبه ۱۴۰۵/۰۸/۳۰","startTime":"۰۶:۰۰","window":"۶ تا ۱۰ صبح","subjects":["ریاضی","هوش","ادبیات","شیمی","فیزیک"],"perSubject":1,"titles":[["crown","قهرمان لیگ"],["sun","سحرخیز برتر"],["flame","پیوسته‌ترین"],["target","تیزبین"],["bolt","پرتلاش‌ترین"],["rocket","بیشترین صعود"]]};</script>
+<script>window.__LEAGUE__={"v":1,"preview":true,"updated":1795014110172,"updatedFa":"1405/08/27","quiz":{},"n":0,"dayList":[],"students":[],"awards":[],"pts":{"part":10,"perCorrect":2,"perfect":10,"streakPer":2,"streakCap":10,"early":[[390,8],[420,5],[480,3],[540,1]],"miles":[[7,20],[14,40],[30,100]],"dayRank":[10,6,3]},"rules":["شرکت در هر آزمونک: ۱۰ امتیاز","هر پاسخ درست: ۲ امتیاز — همه‌ی سؤال‌ها درست: ۱۰ امتیاز پاداش","پیوستگی: هر روز پشت‌سرهم، امتیاز بیشتر (روز دوم به بعد ۲ × تعداد روزهای پیوسته، حداکثر ۱۰ روز)","سحرخیزی: تا ساعت ۰۶:۳۰ → ۸ امتیاز، تا ساعت ۰۷:۰۰ → ۵ امتیاز، تا ساعت ۰۸:۰۰ → ۳ امتیاز، تا ساعت ۰۹:۰۰ → ۱ امتیاز","نشان پیوستگی: ۷ روز → ۲۰ امتیاز، ۱۴ روز → ۴۰ امتیاز، ۳۰ روز → ۱۰۰ امتیاز","رتبه‌های اول هر روز (بیشترین درست): ۱۰، ۶، ۳ امتیاز","اگر تقلبی دیده شود، امتیاز همان روز کم می‌شود."],"tiers":[[0,"نوآموز سحرخیز"],[40,"پرواز اول"],[90,"فضانورد"],[160,"کاوشگر ماه"],[250,"فرمانده‌ی مدار"],[360,"کاپیتان کهکشان"],[500,"شکارچی ستاره‌ها"],[680,"نگهبان کهکشان"],[900,"اسطوره‌ی فضا"],[1200,"افسانه‌ی سحرخیزی"]],"start":"2026-11-21T06:00:00","startFa":"شنبه ۱۴۰۵/۰۸/۳۰","startTime":"۰۶:۰۰","window":"۶ تا ۱۰ صبح","subjects":["ریاضی","هوش","ادبیات","شیمی","فیزیک"],"perSubject":1,"titles":[["crown","قهرمان لیگ"],["sun","سحرخیز برتر"],["flame","پیوسته‌ترین"],["target","تیزبین"],["bolt","پرتلاش‌ترین"],["rocket","بیشترین صعود"]]};</script>
 <script>
 (function(){
 const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]),E=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -176,12 +182,46 @@ function tips(r){
   const ds=dz(r),qs=ds.reduce((a,d)=>a+qnOf(d),0),cs=ds.reduce((a,d)=>a+d.c,0);if(qs)out.push(['target',`دقتت ${fa(Math.round(cs/qs*100))}٪ است (${fa(cs)} پاسخ درست از ${fa(qs)})`]);
   return out;
 }
-function journey(cur){const T=D.tiers||[];return`<div class="jr">${T.map((t,i)=>`<div class="jri ${cur===i?'on':cur>i?'done':''}"><div class="jrs"><img src="${LG_ST[lvIcon(i)]||''}" alt=""></div><b>${E(t[1])}</b><span>${fa(t[0])}+</span></div>`).join('<i class="jrl"></i>')}</div>`}
+function journey(cur){const T=D.tiers||[];return`<div class="jr">${T.map((t,i)=>`<div class="jri ${cur===i?'on':cur>i?'done':''}"><div class="jrs"><img src="${LG_ST[lvIcon(i)]||''}" alt=""></div><b>${E(t[1])}</b><span>از ${fa(t[0])} امتیاز</span></div>`).join('<i class="jrl"></i>')}</div>`}
 function lvIndex(r){const T=D.tiers||[];let k=0;T.forEach((t,i)=>{if(r.total>=t[0])k=i});return k}
 function weekly(){const L=D.dayList||[],S=D.students||[];if(L.length<2)return[];const wk=iso=>{const d=new Date(iso+'T12:00:00');d.setDate(d.getDate()-((d.getDay()+1)%7));return d.toISOString().slice(0,10)};const W=new Map();L.forEach((x,k)=>{const w=wk(x.iso||'2026-01-01');if(!W.has(w))W.set(w,[]);W.get(w).push(k)});
   return[...W.entries()].map(([w,ks],n)=>{let b=null;S.forEach(s=>{const t=ks.reduce((a,k)=>a+((s.days||[])[k]?s.days[k].tot:0),0);if(t>0&&(!b||t>b.t))b={s,t}});return b?{n:n+1,from:L[ks[0]].fa,to:L[ks[ks.length-1]].fa,s:b.s,t:b.t}:null}).filter(Boolean).reverse()}
 function statsHtml(){const L=(D.dayList||[]).slice(-14);if(!L.length)return'';const mx=Math.max(...L.map(x=>x.n||0),1),ms=L.filter(x=>x.avgM!=null),tr=ms.length>1?ms[0].avgM-ms[ms.length-1].avgM:0;
   return`<h2 class="h2">آمار لیگ</h2><div class="stc"><div class="bars">${L.map(x=>`<div class="bc"><i style="height:${Math.max(6,Math.round((x.n||0)/mx*100))}%"></i><span>${fa(x.num)}</span></div>`).join('')}</div><div class="stt"><div><b>${fa(L[L.length-1].n||0)}</b><small>شرکت‌کننده‌ی آخرین آزمونک</small></div><div><b>${ms.length?hm(ms[ms.length-1].avgM):'—'}</b><small>میانگین ساعت شروع</small></div><div><b class="${tr>0?'up':tr<0?'dn':''}">${tr>0?'▲ '+fa(tr)+' دقیقه زودتر':tr<0?'▼ '+fa(-tr)+' دقیقه دیرتر':'—'}</b><small>روند سحرخیزی جمع</small></div></div></div>`}
+function chBar(vals,avg,o){o=o||{};const w=520,h=150,pl=8,pr=8,pt=14,pb=22,n=vals.length;if(!n)return'';const all=vals.concat(avg||[]).filter(v=>v!=null),mx=Math.max(1,...all),bw=(w-pl-pr)/n,Y=v=>pt+(1-v/mx)*(h-pt-pb);
+  let s=vals.map((v,i)=>v==null?`<rect x="${(pl+i*bw+bw*.2).toFixed(1)}" y="${h-pb-3}" width="${(bw*.6).toFixed(1)}" height="3" rx="1.5" fill="rgba(255,255,255,.18)"/>`:`<rect x="${(pl+i*bw+bw*.18).toFixed(1)}" y="${Y(v).toFixed(1)}" width="${(bw*.64).toFixed(1)}" height="${Math.max(2,h-pb-Y(v)).toFixed(1)}" rx="${Math.min(6,bw*.2).toFixed(1)}" fill="url(#gb)"><title>${fa(v)}</title></rect>`).join('');
+  if(avg){const pts=avg.map((v,i)=>v==null?null:[(pl+i*bw+bw/2).toFixed(1),Y(v).toFixed(1)]).filter(Boolean);if(pts.length>1)s+=`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#FF8FB8" stroke-width="2.4" stroke-dasharray="5 4"/>`}
+  s+=(o.labels||[]).map((l,i)=>n<=16||i%Math.ceil(n/12)==0?`<text x="${(pl+i*bw+bw/2).toFixed(1)}" y="${h-6}" font-size="10" fill="#9AA3E8" text-anchor="middle">${fa(l)}</text>`:'').join('');
+  return`<svg viewBox="0 0 ${w} ${h}" class="chs"><defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD76A"/><stop offset="1" stop-color="#7C8BFF"/></linearGradient></defs>${s}</svg>`}
+function chLine(vals,avg,o){o=o||{};const w=520,h=150,pl=10,pr=10,pt=14,pb=22,n=vals.length;const all=vals.concat(avg||[]).filter(v=>v!=null);if(all.length<2)return'';let mn=Math.min(...all),mx=Math.max(...all);if(mn===mx){mn-=1;mx+=1}
+  const X=i=>pl+(n<2?0:i*(w-pl-pr)/(n-1)),Y=v=>{const t=(v-mn)/(mx-mn);return pt+(o.inv?t:1-t)*(h-pt-pb)};
+  const path=a=>a.map((v,i)=>v==null?null:[X(i).toFixed(1),Y(v).toFixed(1)]).filter(Boolean);
+  const P=path(vals);let s='';if(avg){const A=path(avg);if(A.length>1)s+=`<polyline points="${A.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#FF8FB8" stroke-width="2.2" stroke-dasharray="5 4"/>`}
+  if(P.length>1)s+=`<polygon points="${P[0][0]},${h-pb} ${P.map(p=>p.join(',')).join(' ')} ${P[P.length-1][0]},${h-pb}" fill="url(#gl2)" opacity=".5"/><polyline points="${P.map(p=>p.join(',')).join(' ')}" fill="none" stroke="#7C8BFF" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
+  s+=P.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="${i==P.length-1?5:3}" fill="${i==P.length-1?'#FFD76A':'#AEB8FF'}"/>`).join('');
+  s+=(o.labels||[]).map((l,i)=>n<=16||i%Math.ceil(n/12)==0?`<text x="${X(i).toFixed(1)}" y="${h-6}" font-size="10" fill="#9AA3E8" text-anchor="middle">${fa(l)}</text>`:'').join('');
+  if(o.fmt){s+=`<text x="${w-4}" y="12" font-size="10" fill="#9AA3E8" text-anchor="end">${o.inv?o.fmt(mn):o.fmt(mx)}</text><text x="${w-4}" y="${h-pb-2}" font-size="10" fill="#9AA3E8" text-anchor="end">${o.inv?o.fmt(mx):o.fmt(mn)}</text>`}
+  return`<svg viewBox="0 0 ${w} ${h}" class="chs"><defs><linearGradient id="gl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C8BFF"/><stop offset="1" stop-color="#7C8BFF" stop-opacity="0"/></linearGradient></defs>${s}</svg>`}
+function leagueAvg(){const S=D.students||[],L=D.dayList||[];return L.map((x,k)=>{const v=S.map(s=>(s.days||[])[k]).filter(d=>d&&!(d.c===0&&d.w===0&&d.m==null));return v.length?{tot:v.reduce((a,d)=>a+d.tot,0)/v.length,acc:v.reduce((a,d)=>a+d.c/(x.qn||5),0)/v.length*100}:null})}
+function analysis(r){
+  const L=D.dayList||[],lab=L.map(x=>x.num),A=leagueAvg(),dd=r.days||[],part=d=>d&&!(d.c===0&&d.w===0&&d.m==null);
+  const pts=dd.map(d=>part(d)?d.tot:null),acc=dd.map((d,k)=>part(d)?Math.round(d.c/((L[k]||{}).qn||5)*100):null),st=dd.map(d=>part(d)&&d.m!=null?d.m:null);
+  const cum=[];let c=0;dd.forEach(d=>{c+=d?d.tot:0;cum.push(c)});
+  const my=pts.filter(v=>v!=null),myAvg=my.length?my.reduce((a,b)=>a+b,0)/my.length:0,la=A.filter(Boolean),lAvg=la.length?la.reduce((a,x)=>a+x.tot,0)/la.length:0;
+  const myAcc=acc.filter(v=>v!=null),mAcc=myAcc.length?myAcc.reduce((a,b)=>a+b,0)/myAcc.length:0,lAcc=la.length?la.reduce((a,x)=>a+x.acc,0)/la.length:0;
+  const lSt=L.filter(x=>x.avgM!=null),lStA=lSt.length?lSt.reduce((a,x)=>a+x.avgM,0)/lSt.length:null;
+  const cmp=(a,b,better,fmt)=>`<div class="cmp"><b>${fmt(a)}</b><small>تو</small><i class="${(better?a>=b:a<=b)?'g':'b'}">${(better?a>=b:a<=b)?'▲ بهتر از میانگین':'▼ پایین‌تر از میانگین'}</i><small>میانگین لیگ: ${fmt(b)}</small></div>`;
+  const cal=dd.map((d,k)=>`<i class="cl ${!part(d)?'x':d.c>=((L[k]||{}).qn||5)?'p':'o'}" title="آزمونک ${fa((L[k]||{}).num)}"></i>`).join('');
+  const half=Math.floor(my.length/2),trend=my.length>=4?(my.slice(half).reduce((a,b)=>a+b,0)/(my.length-half))-(my.slice(0,half).reduce((a,b)=>a+b,0)/half):null;
+  return`<div class="an"><h3>📊 تحلیل من</h3>
+   <div class="cmps">${cmp(myAvg,lAvg,true,v=>fa(Math.round(v)))}${cmp(mAcc,lAcc,true,v=>fa(Math.round(v))+'٪')}${r.avgStart!=null&&lStA!=null?cmp(r.avgStart,lStA,false,v=>hm(v)):''}</div>
+   ${trend!=null?`<div class="trd ${trend>=0?'g':'b'}">${trend>=0?'📈 روندت رو به بالاست':'📉 کمی افت داشتی'}: امتیاز روزانه‌ات در نیمه‌ی دوم ${trend>=0?'+':''}${fa(Math.round(trend))} نسبت به نیمه‌ی اول</div>`:''}
+   <div class="chc"><b>امتیاز هر آزمونک</b><span class="lg"><i class="a"></i>تو <i class="b"></i>میانگین لیگ</span>${chBar(pts,A.map(x=>x?Math.round(x.tot):null),{labels:lab})}</div>
+   <div class="chc"><b>امتیاز کل (رشد)</b>${chLine(cum,null,{labels:lab,fmt:v=>fa(Math.round(v))})}</div>
+   <div class="chc"><b>رتبه در لیگ</b><span class="lg">بالاتر = بهتر</span>${chLine((r.rankHist||[]).map(x=>x==null?null:x),null,{labels:lab,inv:true,fmt:v=>fa(Math.round(v))})||'<em class="nd">بعد از دو آزمونک نمودار رتبه می‌آید</em>'}</div>
+   <div class="chc"><b>ساعت شروع</b><span class="lg"><i class="a"></i>تو <i class="b"></i>میانگین لیگ — پایین‌تر = سحرخیزتر</span>${chLine(st,L.map(x=>x.avgM),{labels:lab,fmt:v=>hm(v)})||'<em class="nd">هنوز ساعت شروعی ثبت نشده</em>'}</div>
+   <div class="chc"><b>درصد درست</b>${chBar(acc,A.map(x=>x?Math.round(x.acc):null),{labels:lab})}</div>
+   <div class="chc"><b>تقویم حضور</b><span class="lg"><i class="cl p"></i>کامل <i class="cl o"></i>شرکت <i class="cl x"></i>غایب</span><div class="cal">${cal}</div></div></div>`}
 function pose(r){return r.rank==1?'trophy':r.rank<=3?'thumb':r.streak>=3?'flag':'wave'}
 function preview(){
   const st=D.start?new Date(D.start):null,subs=D.subjects||['ریاضی','هوش','ادبیات','شیمی','فیزیک'],tiers=D.tiers||[],titles=D.titles||[];
@@ -231,7 +271,7 @@ function view(){
 }
 window.setTab=t=>{tab=t;view()};
 window.pick=i=>{me=String(i);try{localStorage.setItem('lgme',me)}catch(e){}view();window.scrollTo({top:0,behavior:'smooth'})};
-window.closeS=()=>{const m=$('.mbg');if(m)m.remove()};
+window.closeS=()=>{const m=$('.mbg');if(m)m.remove();try{if(/^#s\d+/.test(location.hash))history.replaceState(null,'',location.pathname+location.search)}catch(e){}};
 window.openS=i=>{const r=(D.students||[]).find(s=>s.i==i);if(!r)return;closeS();
   const days=(r.days||[]).map((d,k)=>d?`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>${fa(d.c)} درست — ${fa(d.w)} غلط — شروع ${hm(d.m)}</span><b style="color:#FFD76A">${d.tot>0?'+':''}${fa(d.tot)}</b></div>`:`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>شرکت نکرد</span><b>—</b></div>`).reverse().join('');
   const el=document.createElement('div');el.className='mbg';el.onclick=e=>{if(e.target==el)closeS()};
@@ -239,12 +279,16 @@ window.openS=i=>{const r=(D.students||[]).find(s=>s.i==i);if(!r)return;closeS();
   <div class="g3"><div><b>${fa(r.rank)}</b><small>رتبه</small></div><div><b>${fa(r.total)}</b><small>امتیاز کل</small></div><div><b>${fa(r.streak)}</b><small>روز پیوسته</small></div><div><b>${fa(r.parts)}/${fa(D.n)}</b><small>شرکت</small></div><div><b>${fa(r.best)}</b><small>بهترین رشته</small></div><div><b>${hm(r.avgStart)}</b><small>میانگین شروع</small></div></div>
   <div style="color:#B9C0FF;font-size:13px">سطح: <b style="color:#fff">${E(r.level)}</b>${r.lvlNext?' — '+fa(Math.max(0,r.lvlNext.at-r.total))+' امتیاز تا «'+E(r.lvlNext.name)+'»':' — بالاترین سطح 🎉'}</div><div class="bar"><i style="width:${r.lvlPct}%"></i></div>
   ${(r.badges||[]).length?`<div class="bds">${r.badges.map(b=>`<span>${lgBadge(b[0],26)}${E(b[1])}</span>`).join('')}</div>`:''}
-  ${(r.rankHist||[]).filter(x=>x!=null).length>1?`<div style="margin:14px 0 4px;color:#B9C0FF;font-size:13px">روند رتبه (هرچه بالاتر، رتبه بهتر)</div>${spark((r.rankHist||[]).map(x=>x==null?null:-x),480,80)}`:''}
   <div class="tips sm">${tips(r).map(t=>`<div><img src="${LG_ST[t[0]]}" alt=""><span>${t[1]}</span></div>`).join('')}</div>
   <div style="margin:14px 0 6px;color:#B9C0FF;font-size:13px">نشان‌ها (${fa(achOf(r).filter(a=>a.ok).length)} از ${fa(ACH.length)})</div><div class="ach sm">${achOf(r).map(a=>`<div class="ac ${a.ok?'':'lk'}"><img src="${LG_ST[a.ic]}" alt=""><b>${E(a.t)}</b><span>${E(a.d)}</span></div>`).join('')}</div>
-  <div style="margin-top:12px">${days}</div></div>`;
-  document.body.appendChild(el)};
-function boot(){view();fetch('league-data.json?'+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.students){D=j;view()}}).catch(()=>{})}
+  ${analysis(r)}
+  <div style="margin:14px 0 4px;color:#B9C0FF;font-size:13px">ریز آزمونک‌ها</div><div>${days}</div>
+  <button class="shr" onclick="shareS(${r.i})">🔗 لینک صفحه‌ی من</button></div>`;
+  document.body.appendChild(el);try{history.replaceState(null,'','#s'+r.i)}catch(e){}};
+window.shareS=i=>{const u=location.href.split('#')[0]+'#s'+i;try{navigator.clipboard.writeText(u);alertish('لینک کپی شد؛ ذخیره‌اش کن تا هر روز مستقیم صفحه‌ی خودت باز شود')}catch(e){prompt('لینک صفحه‌ی تو',u)}};
+function alertish(t){const d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),3500)}
+function hashOpen(){const m=/^#s(\d+)/.exec(location.hash);if(m&&(D.students||[]).some(s=>String(s.i)===m[1])){if(!me){me=m[1];try{localStorage.setItem('lgme',me)}catch(e){}}view();openS(+m[1])}}
+function boot(){view();hashOpen();fetch('league-data.json?'+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.students){D=j;view();hashOpen()}}).catch(()=>{})}
 boot();
 })();
 </script></body></html>
