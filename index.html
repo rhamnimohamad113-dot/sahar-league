@@ -71,7 +71,7 @@ html{background:#14103F}body{font-family:Vazirmatn,Tahoma,'Segoe UI',sans-serif;
 .an{margin-top:16px}.an h3{margin:0 0 10px;font-size:16px;color:var(--gold)}.cmps{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}.cmp{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px;text-align:center}.cmp b{display:block;font-size:22px}.cmp small{display:block;font-size:11px;color:var(--mu)}.cmp i{display:block;font-style:normal;font-size:11.5px;margin:4px 0;font-weight:700}.cmp i.g{color:#6CF0B0}.cmp i.b{color:#FF93A8}
 .trd{margin:10px 0;padding:9px 12px;border-radius:14px;font-size:13px}.trd.g{background:rgba(31,191,117,.15);color:#9BF5C9}.trd.b{background:rgba(240,80,110,.15);color:#FFB3C2}
 .chc{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:10px 12px;margin-top:10px}.chc>b{font-size:13.5px}.chc .lg{float:left;font-size:11px;color:var(--mu)}.chc .lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 4px -1px 2px}.chc .lg i.a{background:#7C8BFF}.chc .lg i.b{background:#FF8FB8}.chs{width:100%;height:auto;display:block;margin-top:6px;direction:ltr}.nd{display:block;font-size:12px;color:var(--mu);padding:12px 0;font-style:normal}
-.cal{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;direction:ltr}.cl{display:inline-block;width:18px;height:18px;border-radius:5px}.cl.p{background:linear-gradient(135deg,#FFD76A,#F2A516)}.cl.o{background:#7C8BFF}.cl.x{background:rgba(255,255,255,.12)}.chc .lg .cl{width:10px;height:10px}
+.cal{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;direction:ltr}.cl{display:inline-block;width:18px;height:18px;border-radius:5px}.cl.p{background:linear-gradient(135deg,#FFD76A,#F2A516)}.cl.o{background:#7C8BFF}.cl.x{background:rgba(255,255,255,.12)}.cl.a{background:rgba(240,80,110,.55)}.chc .lg .cl{width:10px;height:10px}
 .shr{margin-top:14px;width:100%;font:inherit;font-weight:700;color:#2A2370;background:linear-gradient(90deg,#FFE38A,#FFB86B);border:0;border-radius:14px;padding:11px;cursor:pointer}
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#fff;color:#2A2370;border-radius:14px;padding:10px 16px;font-size:13px;z-index:99;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 @media(max-width:520px){.hero h1{font-size:25px}.hero .sc svg{width:130px;height:auto}}
@@ -136,7 +136,7 @@ function lgAstro(o){ o = o || {}; const P = {trophy: 'trophy', thumb: 'cheer', f
 function lgAvatar(key, size){ return lgCartoonHead(key, size); }
 function lgScene(kind, pose, size){ return lgCartoon({pose: pose === 'sit' ? 'wave' : (pose || 'wave'), planet: kind === 'moon' ? 'moon' : 'earth', size: size || 220}).replace('class="lg-cart"', 'class="lg-scene"'); }
 function lgBadge(kind, size, txt){ const n = LG_BADGE[kind] || 'glow'; return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="${size || 40}" height="${size || 40}" class="lg-bdg">${lgImg(n, 0, 0, 100)}</svg>`; }</script>
-<script>window.__LEAGUE__={"v":1,"preview":true,"updated":1795014110172,"updatedFa":"1405/08/27","quiz":{},"n":0,"dayList":[],"students":[],"awards":[],"pts":{"part":10,"perCorrect":2,"perfect":10,"streakPer":2,"streakCap":10,"early":[[390,8],[420,5],[480,3],[540,1]],"miles":[[7,20],[14,40],[30,100]],"dayRank":[10,6,3]},"rules":["شرکت در هر آزمونک: ۱۰ امتیاز","هر پاسخ درست: ۲ امتیاز — همه‌ی سؤال‌ها درست: ۱۰ امتیاز پاداش","پیوستگی: هر روز پشت‌سرهم، امتیاز بیشتر (روز دوم به بعد ۲ × تعداد روزهای پیوسته، حداکثر ۱۰ روز)","سحرخیزی: تا ساعت ۰۶:۳۰ → ۸ امتیاز، تا ساعت ۰۷:۰۰ → ۵ امتیاز، تا ساعت ۰۸:۰۰ → ۳ امتیاز، تا ساعت ۰۹:۰۰ → ۱ امتیاز","نشان پیوستگی: ۷ روز → ۲۰ امتیاز، ۱۴ روز → ۴۰ امتیاز، ۳۰ روز → ۱۰۰ امتیاز","رتبه‌های اول هر روز (بیشترین درست): ۱۰، ۶، ۳ امتیاز","اگر تقلبی دیده شود، امتیاز همان روز کم می‌شود."],"tiers":[[0,"نوآموز سحرخیز"],[40,"پرواز اول"],[90,"فضانورد"],[160,"کاوشگر ماه"],[250,"فرمانده‌ی مدار"],[360,"کاپیتان کهکشان"],[500,"شکارچی ستاره‌ها"],[680,"نگهبان کهکشان"],[900,"اسطوره‌ی فضا"],[1200,"افسانه‌ی سحرخیزی"]],"start":"2026-11-21T06:00:00","startFa":"شنبه ۱۴۰۵/۰۸/۳۰","startTime":"۰۶:۰۰","window":"۶ تا ۱۰ صبح","subjects":["ریاضی","هوش","ادبیات","شیمی","فیزیک"],"perSubject":1,"titles":[["crown","قهرمان لیگ"],["sun","سحرخیز برتر"],["flame","پیوسته‌ترین"],["target","تیزبین"],["bolt","پرتلاش‌ترین"],["rocket","بیشترین صعود"]]};</script>
+<script>window.__LEAGUE__={"v":1,"preview":true,"updated":1795014534849,"updatedFa":"1405/08/27","quiz":{},"n":0,"dayList":[],"students":[],"awards":[],"pts":{"absent":5,"weekFull":15,"part":10,"perCorrect":2,"perfect":10,"streakPer":2,"streakCap":10,"early":[[390,8],[420,5],[480,3],[540,1]],"miles":[[7,20],[14,40],[30,100]],"dayRank":[10,6,3]},"rules":["شرکت در هر آزمونک: ۱۰ امتیاز","هر پاسخ درست: ۲ امتیاز — همه‌ی سؤال‌ها درست: ۱۰ امتیاز پاداش","پیوستگی: هر روز پشت‌سرهم، امتیاز بیشتر (روز دوم به بعد ۲ × تعداد روزهای پیوسته، حداکثر ۱۰ روز)","سحرخیزی: تا ساعت ۰۶:۳۰ → ۸ امتیاز، تا ساعت ۰۷:۰۰ → ۵ امتیاز، تا ساعت ۰۸:۰۰ → ۳ امتیاز، تا ساعت ۰۹:۰۰ → ۱ امتیاز","نشان پیوستگی: ۷ روز → ۲۰ امتیاز، ۱۴ روز → ۴۰ امتیاز، ۳۰ روز → ۱۰۰ امتیاز","رتبه‌های اول هر روز (بیشترین درست): ۱۰، ۶، ۳ امتیاز","غیبت: کسی که آزمونکی را ندهد در لیگ می‌ماند ولی برای هر آزمونکِ غایب ۵ امتیاز کم می‌شود و زنجیره‌اش هم قطع می‌شود.","هفته‌ی کامل: اگر همه‌ی آزمونک‌های یک هفته را بدهی ۱۵ امتیاز پاداش","اگر تقلبی دیده شود، امتیاز همان روز کم می‌شود."],"tiers":[[0,"نوآموز سحرخیز"],[40,"پرواز اول"],[90,"فضانورد"],[160,"کاوشگر ماه"],[250,"فرمانده‌ی مدار"],[360,"کاپیتان کهکشان"],[500,"شکارچی ستاره‌ها"],[680,"نگهبان کهکشان"],[900,"اسطوره‌ی فضا"],[1200,"افسانه‌ی سحرخیزی"]],"start":"2026-11-21T06:00:00","startFa":"شنبه ۱۴۰۵/۰۸/۳۰","startTime":"۰۶:۰۰","window":"۶ تا ۱۰ صبح","subjects":["ریاضی","هوش","ادبیات","شیمی","فیزیک"],"perSubject":1,"titles":[["crown","قهرمان لیگ"],["sun","سحرخیز برتر"],["flame","پیوسته‌ترین"],["target","تیزبین"],["bolt","پرتلاش‌ترین"],["rocket","بیشترین صعود"]]};</script>
 <script>
 (function(){
 const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]),E=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -148,7 +148,7 @@ function spark(v,w,h){const V=v.filter(x=>x!=null);if(V.length<2)return'';const 
 const LVI=['sunrise','rocket','satellite','moon','ufo','planet','shooting','glow','gem','crown','trophy'];
 const lvIcon=i=>LVI[Math.min(i,LVI.length-1)]||'glow';
 const P=()=>D.pts||{part:10,perCorrect:2,perfect:10,streakPer:2,streakCap:10,early:[[390,8],[420,5],[480,3],[540,1]],miles:[],dayRank:[10,6,3]};
-const dz=r=>(r.days||[]).map((d,k)=>d&&d.m!==undefined&&!(d.c===0&&d.w===0&&d.m==null)?Object.assign({k},d):null).filter(Boolean);
+const dz=r=>(r.days||[]).map((d,k)=>d&&!d.ab&&d.m!==undefined&&!(d.c===0&&d.w===0&&d.m==null)?Object.assign({k},d):null).filter(Boolean);
 const qnOf=d=>((D.dayList||[])[d.k]||{}).qn||5;
 const maxUp=r=>{let b=0;const h=r.rankHist||[];for(let i=1;i<h.length;i++)if(h[i]!=null&&h[i-1]!=null)b=Math.max(b,h[i-1]-h[i]);return b};
 const gaps=r=>{const a=r.days||[];let seen=false,gap=false;for(const d of a){if(d&&!(d.c===0&&d.w===0&&d.m==null)){if(gap)return true;seen=true}else if(seen)gap=true}return false};
@@ -167,6 +167,7 @@ const ACH=[
  ['ufo','پرش بزرگ','۳ پله صعود در یک روز',r=>maxUp(r)>=3],
  ['sparkles','بازگشت قهرمان','بعد از غیبت دوباره آمدی',r=>gaps(r)],
  ['books','پرتلاش','۱۰ آزمونک',r=>r.parts>=10],
+ ['clap','هفته‌ی کامل','همه‌ی آزمونک‌های یک هفته',r=>(r.weeks||0)>=1],
  ['gem','وفادار','۲۰ آزمونک',r=>r.parts>=20],
  ['trophy','قهرمان لیگ','نفر اول جدول کل',r=>r.rank===1]];
 const achOf=r=>ACH.map(a=>({ic:a[0],t:a[1],d:a[2],ok:!!a[3](r)}));
@@ -179,6 +180,9 @@ function tips(r){
   if(nx){const g=Math.max(0,nx.total-r.total);out.push(['rocket',`فقط ${fa(g)} امتیاز تا رتبه‌ی ${fa(r.rank-1)}`+(g?` — یک روز عالی تا ${fa(bestDay())} امتیاز دارد`:'')])}
   else out.push(['crown','صدرنشین لیگ هستی! بقیه دنبالت هستند 😎']);
   if(r.lvlNext){const need=Math.max(0,r.lvlNext.at-r.total),avg=r.parts?r.total/r.parts:0;out.push(['glow',`${fa(need)} امتیاز تا سطح «${E(r.lvlNext.name)}»`+(avg?` — حدود ${fa(Math.max(1,Math.ceil(need/avg)))} آزمونک دیگر`:'')])}
+  const lastD=(r.days||[])[(r.days||[]).length-1];if(lastD&&lastD.ab)out.unshift(['alarm',`آخرین آزمونک را ندادی${lastD.tot?' ('+fa(lastD.tot)+' امتیاز)':''}؛ فردا ساعت ۶ تا ۱۰ برگرد تا زنجیره‌ی تازه بسازی 💪`]);
+  if(r.absN)out.push(['sleep',`تا حالا ${fa(r.absN)} آزمونک غایب بوده‌ای`+((P().absent||0)?` (هر غیبت ${fa(P().absent)}- امتیاز)`:'')]);
+  if(r.weeks)out.push(['trophy',`${fa(r.weeks)} هفته‌ی کامل! هر هفته‌ی کامل ${fa(P().weekFull||0)} امتیاز پاداش`]);
   const ds=dz(r),qs=ds.reduce((a,d)=>a+qnOf(d),0),cs=ds.reduce((a,d)=>a+d.c,0);if(qs)out.push(['target',`دقتت ${fa(Math.round(cs/qs*100))}٪ است (${fa(cs)} پاسخ درست از ${fa(qs)})`]);
   return out;
 }
@@ -204,14 +208,14 @@ function chLine(vals,avg,o){o=o||{};const w=520,h=150,pl=10,pr=10,pt=14,pb=22,n=
   return`<svg viewBox="0 0 ${w} ${h}" class="chs"><defs><linearGradient id="gl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C8BFF"/><stop offset="1" stop-color="#7C8BFF" stop-opacity="0"/></linearGradient></defs>${s}</svg>`}
 function leagueAvg(){const S=D.students||[],L=D.dayList||[];return L.map((x,k)=>{const v=S.map(s=>(s.days||[])[k]).filter(d=>d&&!(d.c===0&&d.w===0&&d.m==null));return v.length?{tot:v.reduce((a,d)=>a+d.tot,0)/v.length,acc:v.reduce((a,d)=>a+d.c/(x.qn||5),0)/v.length*100}:null})}
 function analysis(r){
-  const L=D.dayList||[],lab=L.map(x=>x.num),A=leagueAvg(),dd=r.days||[],part=d=>d&&!(d.c===0&&d.w===0&&d.m==null);
+  const L=D.dayList||[],lab=L.map(x=>x.num),A=leagueAvg(),dd=r.days||[],part=d=>d&&!d.ab&&!(d.c===0&&d.w===0&&d.m==null);
   const pts=dd.map(d=>part(d)?d.tot:null),acc=dd.map((d,k)=>part(d)?Math.round(d.c/((L[k]||{}).qn||5)*100):null),st=dd.map(d=>part(d)&&d.m!=null?d.m:null);
   const cum=[];let c=0;dd.forEach(d=>{c+=d?d.tot:0;cum.push(c)});
   const my=pts.filter(v=>v!=null),myAvg=my.length?my.reduce((a,b)=>a+b,0)/my.length:0,la=A.filter(Boolean),lAvg=la.length?la.reduce((a,x)=>a+x.tot,0)/la.length:0;
   const myAcc=acc.filter(v=>v!=null),mAcc=myAcc.length?myAcc.reduce((a,b)=>a+b,0)/myAcc.length:0,lAcc=la.length?la.reduce((a,x)=>a+x.acc,0)/la.length:0;
   const lSt=L.filter(x=>x.avgM!=null),lStA=lSt.length?lSt.reduce((a,x)=>a+x.avgM,0)/lSt.length:null;
   const cmp=(a,b,better,fmt)=>`<div class="cmp"><b>${fmt(a)}</b><small>تو</small><i class="${(better?a>=b:a<=b)?'g':'b'}">${(better?a>=b:a<=b)?'▲ بهتر از میانگین':'▼ پایین‌تر از میانگین'}</i><small>میانگین لیگ: ${fmt(b)}</small></div>`;
-  const cal=dd.map((d,k)=>`<i class="cl ${!part(d)?'x':d.c>=((L[k]||{}).qn||5)?'p':'o'}" title="آزمونک ${fa((L[k]||{}).num)}"></i>`).join('');
+  const cal=dd.map((d,k)=>`<i class="cl ${d&&d.ab?'a':!part(d)?'x':d.c>=((L[k]||{}).qn||5)?'p':'o'}" title="آزمونک ${fa((L[k]||{}).num)}"></i>`).join('');
   const half=Math.floor(my.length/2),trend=my.length>=4?(my.slice(half).reduce((a,b)=>a+b,0)/(my.length-half))-(my.slice(0,half).reduce((a,b)=>a+b,0)/half):null;
   return`<div class="an"><h3>📊 تحلیل من</h3>
    <div class="cmps">${cmp(myAvg,lAvg,true,v=>fa(Math.round(v)))}${cmp(mAcc,lAcc,true,v=>fa(Math.round(v))+'٪')}${r.avgStart!=null&&lStA!=null?cmp(r.avgStart,lStA,false,v=>hm(v)):''}</div>
@@ -221,7 +225,7 @@ function analysis(r){
    <div class="chc"><b>رتبه در لیگ</b><span class="lg">بالاتر = بهتر</span>${chLine((r.rankHist||[]).map(x=>x==null?null:x),null,{labels:lab,inv:true,fmt:v=>fa(Math.round(v))})||'<em class="nd">بعد از دو آزمونک نمودار رتبه می‌آید</em>'}</div>
    <div class="chc"><b>ساعت شروع</b><span class="lg"><i class="a"></i>تو <i class="b"></i>میانگین لیگ — پایین‌تر = سحرخیزتر</span>${chLine(st,L.map(x=>x.avgM),{labels:lab,fmt:v=>hm(v)})||'<em class="nd">هنوز ساعت شروعی ثبت نشده</em>'}</div>
    <div class="chc"><b>درصد درست</b>${chBar(acc,A.map(x=>x?Math.round(x.acc):null),{labels:lab})}</div>
-   <div class="chc"><b>تقویم حضور</b><span class="lg"><i class="cl p"></i>کامل <i class="cl o"></i>شرکت <i class="cl x"></i>غایب</span><div class="cal">${cal}</div></div></div>`}
+   <div class="chc"><b>تقویم حضور</b><span class="lg"><i class="cl p"></i>کامل <i class="cl o"></i>شرکت <i class="cl a"></i>غایب</span><div class="cal">${cal}</div></div></div>`}
 function pose(r){return r.rank==1?'trophy':r.rank<=3?'thumb':r.streak>=3?'flag':'wave'}
 function preview(){
   const st=D.start?new Date(D.start):null,subs=D.subjects||['ریاضی','هوش','ادبیات','شیمی','فیزیک'],tiers=D.tiers||[],titles=D.titles||[];
@@ -273,7 +277,7 @@ window.setTab=t=>{tab=t;view()};
 window.pick=i=>{me=String(i);try{localStorage.setItem('lgme',me)}catch(e){}view();window.scrollTo({top:0,behavior:'smooth'})};
 window.closeS=()=>{const m=$('.mbg');if(m)m.remove();try{if(/^#s\d+/.test(location.hash))history.replaceState(null,'',location.pathname+location.search)}catch(e){}};
 window.openS=i=>{const r=(D.students||[]).find(s=>s.i==i);if(!r)return;closeS();
-  const days=(r.days||[]).map((d,k)=>d?`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>${fa(d.c)} درست — ${fa(d.w)} غلط — شروع ${hm(d.m)}</span><b style="color:#FFD76A">${d.tot>0?'+':''}${fa(d.tot)}</b></div>`:`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>شرکت نکرد</span><b>—</b></div>`).reverse().join('');
+  const days=(r.days||[]).map((d,k)=>d&&d.ab?`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span style="color:#FF93A8">غایب</span><b style="color:#FF93A8">${d.tot?fa(d.tot):'—'}</b></div>`:d?`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>${fa(d.c)} درست — ${fa(d.w)} غلط — شروع ${hm(d.m)}</span><b style="color:#FFD76A">${d.tot>0?'+':''}${fa(d.tot)}</b></div>`:`<div class="dd"><b>آزمونک ${fa(D.dayList[k].num)}</b><span>شرکت نکرد</span><b>—</b></div>`).reverse().join('');
   const el=document.createElement('div');el.className='mbg';el.onclick=e=>{if(e.target==el)closeS()};
   el.innerHTML=`<div class="md"><div class="mh">${lgAstro({pose:pose(r),size:112,acc:['#6C7CFF','#FFB02E','#2FC6A0','#FF6B9A','#9B7BFF'][r.i%5]})}<div><h2>${E(r.name)}</h2><div style="color:#B9C0FF;font-size:13px">${E(r.title)}</div><div style="margin-top:6px">${arrow(r)}</div></div><button class="x" onclick="closeS()">✕</button></div>
   <div class="g3"><div><b>${fa(r.rank)}</b><small>رتبه</small></div><div><b>${fa(r.total)}</b><small>امتیاز کل</small></div><div><b>${fa(r.streak)}</b><small>روز پیوسته</small></div><div><b>${fa(r.parts)}/${fa(D.n)}</b><small>شرکت</small></div><div><b>${fa(r.best)}</b><small>بهترین رشته</small></div><div><b>${hm(r.avgStart)}</b><small>میانگین شروع</small></div></div>
